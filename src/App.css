@@ -1,38 +1,238 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e4f1fe;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  font-family: 'Lato', sans-serif;
+  color: rgb(0, 0, 0);
+  max-width: 100%;
+  margin: 0 auto; 
+  
+}
+
+.tobiheader{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: #22313f;
+  border-radius: 6px;
+  font-size: x-large;
+  color: #e4f1fe;
+  
+}
+
+.balonce{
+  background-color: #ffffff;
+  font-style:initial;
+  border-radius: 6px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 1px;
+  
+}
+.balance{
+  font-size: 30px;
+  margin: 1px;
+}
+
+.IncomeExpense{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 4px 0;
+  box-shadow: var(--box-shadow);
+  gap: 8%;
+  background-color: #8dc6ff;
+  border-radius: 6px;
+  border: 2px;
+  border-color: #22313f;
+  
+
+}
+
+.tobibox {
+  background-color: #ffffff;
+  padding: 18px ;
+  width: 50%;
+
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.income{
+  color: green;
+}
+.expense{
+  color: red;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.transaction{
+  background-color: #34495e;
+  color: #e4f1fe;
+  border-radius: 3px;
+  font-family: 'Times New Roman', Times, serif;
+  margin: 1px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.tobi1history{
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.tobilabel {
+  flex: 1; 
+}
+
+.tobiNew {
+  background-color:#34495e;
   color: white;
+  padding: 7px; 
+  margin-top: 10px ;
+  }
+
+  .money {
+    font-size: 20px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+  }
+  
+  .money.plus {
+    color: #2ecc71;
+  }
+  
+  .money.minus {
+    color: #c0392b;
+  }
+
+  label {
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  input[type='text'],
+  input[type='number'] {
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    display: block;
+    font-size: 16px;
+    padding: px;
+    width: 80%;
+    margin-left: 10%;
+
+  }
+  
+  
+  .btn {
+    cursor: pointer;
+    background-color: #9c88ff;
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .btn:focus,
+  .delete-btn:focus {
+    outline: 0;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+  
+  .list li {
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+  }
+  
+  .list li.plus {
+    border-right: 5px solid #2ecc71;
+  }
+  
+  .list li.minus {
+    border-right: 5px solid #c0392b;
+  }
+  
+  .delete-btn {
+    cursor: pointer;
+    background-color: #e74c3c;
+    border: 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .list li:hover .delete-btn {
+    opacity: 1;
+  }
+  .tobiForm{
+    background-color: #8dc6ff; 
+    border-radius: 1px;
+    
+    margin-top:1%;
+    }
+
+  .description{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 10%;
+   
+
+  }
+  .amount{
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 10%;
+  }
+
+  .tobi1btn {
+    cursor: pointer;
+    background-color:  #22313f; 
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px auto 20px; /* Increased the margin-bottom for more space */
+    padding: 10px;
+    width: 30%;
+    border-radius: 10px;
+    margin-bottom: 4px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+  .transaction-history {
+    height: 140px; 
+    overflow-y: auto; 
   }
-  to {
-    transform: rotate(360deg);
+  .tobiNew{
+    border-radius: 6px;
   }
-}
+
+  .tobi2text{
+    width: 10%;
+  }
+  

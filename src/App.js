@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
+import './App.css';
+import { TobiHeader } from './components/TobiHeader';
+import {TobiBalance} from './components/TobiBalance';
+import {TobiIncome} from './components/TobiIncome';
+import { TobiHistory } from './components/TobiHistory';
+import { TobiAddTran } from './components/TobiAddTran';
+
+import { GlobalProvider } from './context/globalState'
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider >
+      <TobiHeader /> 
+      <div className="TobiContain">
+        <TobiBalance/>
+        <TobiIncome/>
+        <TobiHistory/>
+        <TobiAddTran/>
+        </div>
+      </GlobalProvider>
   );
 }
 
