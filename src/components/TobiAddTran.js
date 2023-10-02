@@ -31,7 +31,7 @@ export const TobiAddTran = () => {
         </div>
         <div className="htmlForm-control">
           <label htmlFor="amount" className='amount'>Amount <br /></label><br/>
-          <input  className="tobi2amount" type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
+          <input  className="tobi2amount" type="text" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
         </div>
         <button className="tobi1btn">Add</button>
       </form>
